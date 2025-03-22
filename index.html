@@ -31,8 +31,11 @@
             z-index: 1000;
             display: flex;
             justify-content: center;
+            overflow-x: auto; /* Позволяет прокручивать меню горизонтально */
+            white-space: nowrap; /* Запрещает перенос текста */
         }
         .menu a {
+            display: inline-block;
             text-decoration: none;
             color: #005500;
             font-size: 1.2rem;
@@ -136,12 +139,9 @@
 
     <script>
         function showSection(sectionId) {
-            // Скрываем все секции
             document.querySelectorAll('.section').forEach(section => {
                 section.classList.remove('active');
             });
-
-            // Показываем выбранную секцию
             document.getElementById(sectionId).classList.add('active');
         }
     </script>
