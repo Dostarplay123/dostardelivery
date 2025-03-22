@@ -31,14 +31,15 @@
             z-index: 1000;
             display: flex;
             justify-content: center;
-            overflow-x: auto; /* Позволяет прокручивать меню горизонтально */
-            white-space: nowrap; /* Запрещает перенос текста */
+            overflow-x: auto;
+            white-space: nowrap;
+            border-bottom: 2px solid #ddd;
         }
         .menu a {
             display: inline-block;
             text-decoration: none;
             color: #005500;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin: 0 15px;
             padding: 10px;
             transition: 0.3s;
@@ -52,7 +53,7 @@
             display: inline-block;
             background-color: green;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             text-decoration: none;
             padding: 10px 20px;
             margin: 10px 0;
@@ -67,13 +68,13 @@
             margin: 20px 0;
         }
         .description {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin: 5px 0;
             color: #555;
         }
         footer {
             margin-top: 20px;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
         footer a {
             color: #000;
@@ -85,10 +86,13 @@
         }
         .section {
             display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
             padding: 20px;
         }
         .active {
             display: block;
+            opacity: 1;
         }
     </style>
 </head>
@@ -106,38 +110,31 @@
 
     <div id="gotovaya-eda" class="section active">
         <h2>Готовая еда</h2>
-    </div>
-    <div>
-        <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
-            <img src="https://i.ibb.co.com/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
-        <a href="https://wa.me/77072047360" class="btn">Заказать в WhatsApp</a>
-    </div>
-
-    <div>
-        <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
-            <img src="https://i.ibb.co.com/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
-        <a href="https://wa.me/77072047360" class="btn">Заказать в WhatsApp</a>
-    </div>
 
         <div>
-        <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
-            <img src="https://i.ibb.co.com/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
-        <a href="https://wa.me/77072047360" class="btn">Заказать в WhatsApp</a>
+            <a href="https://api.whatsapp.com/send?phone=77072047360&text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
+                <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
+            </a>
+            <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
+            <a href="https://api.whatsapp.com/send?phone=77072047360" class="btn">Заказать в WhatsApp</a>
+        </div>
+
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=77072047360&text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
+                <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
+            </a>
+            <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
+            <a href="https://api.whatsapp.com/send?phone=77072047360" class="btn">Заказать в WhatsApp</a>
+        </div>
     </div>
 
     <div id="deserty" class="section">
         <h2>Десерты</h2>
-        <a href="https://wa.me/77474705053">
-            <img src="https://i.ibb.co.com/7kJh79G/Dostar.jpg" alt="Заказать в WhatsApp">
+        <a href="https://api.whatsapp.com/send?phone=77474705053">
+            <img src="https://i.ibb.co/7kJh79G/Dostar.jpg" alt="Заказать в WhatsApp">
         </a>
         <div class="description">Хотите рекламу здесь? пишите в WhatsApp:</div>
-        <a href="https://wa.me/77474705053" class="btn">Заказать в WhatsApp</a>
+        <a href="https://api.whatsapp.com/send?phone=77474705053" class="btn">Заказать в WhatsApp</a>
     </div>
 
     <div id="kofe" class="section">
