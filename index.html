@@ -29,11 +29,8 @@
             padding: 10px 15px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            overflow-x: auto;
-            white-space: nowrap;
             display: flex;
-            justify-content: flex-start;
-            scroll-behavior: smooth;
+            justify-content: center;
         }
         .menu a {
             text-decoration: none;
@@ -42,7 +39,7 @@
             margin: 0 15px;
             padding: 10px;
             transition: 0.3s;
-            flex-shrink: 0;
+            cursor: pointer;
         }
         .menu a:hover {
             color: green;
@@ -83,73 +80,71 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
     </style>
 </head>
 <body>
+
     <h1>"ДОСТАР"</h1>
     <p>ДОСТАВКА ЕДЫ</p>
-    <div class="menu" id="menu">
-        <a href="#gotovaya-eda">Готовая еда</a>
-        <a href="#deserty">Десерты</a>
-        <a href="#kofe">Кофе</a>
-        <a href="#detyam">Любят Дети</a>
+    
+    <div class="menu">
+        <a onclick="showSection('gotovaya-eda')">Готовая еда</a>
+        <a onclick="showSection('deserty')">Десерты</a>
+        <a onclick="showSection('kofe')">Кофе</a>
+        <a onclick="showSection('detyam')">Любят Дети</a>
     </div>
 
-    <script>
-        const menu = document.getElementById('menu');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        menu.addEventListener('mousedown', (e) => {
-            isDown = true;
-            startX = e.pageX - menu.offsetLeft;
-            scrollLeft = menu.scrollLeft;
-        });
-        menu.addEventListener('mouseleave', () => {
-            isDown = false;
-        });
-        menu.addEventListener('mouseup', () => {
-            isDown = false;
-        });
-        menu.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - menu.offsetLeft;
-            const walk = (x - startX) * 2;
-            menu.scrollLeft = scrollLeft - walk;
-        });
-    </script>
-
-    <hr>
-
-    <div id="gotovaya-eda">
+    <div id="gotovaya-eda" class="section active">
         <h2>Готовая еда</h2>
-        <div>
-            <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
-                <img src="https://i.ibb.co.com/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
-            </a>
-            <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad", подробности в What's up. Работаем с 10:00 утра до 22:00 вечера:</div>
-            <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
-        </div>
-        <hr>
-        
-    </div>
-<hr>
-    <div>
         <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
             <img src="https://i.ibb.co.com/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
         </a>
-        <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad", подробности в What's up. Работаем с 10:00 утра до 22:00 вечера:</div>
-        <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
+        <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
+        <a href="https://wa.me/77072047360" class="btn">Заказать в WhatsApp</a>
     </div>
-    <hr>
-    
-</div>
+
+    <div id="deserty" class="section">
+        <h2>Десерты</h2>
+        <a href="https://wa.me/77474705053">
+            <img src="https://i.ibb.co.com/7kJh79G/Dostar.jpg" alt="Заказать в WhatsApp">
+        </a>
+        <div class="description">Хотите рекламу здесь? пишите в WhatsApp:</div>
+        <a href="https://wa.me/77474705053" class="btn">Заказать в WhatsApp</a>
+    </div>
+
+    <div id="kofe" class="section">
+        <h2>Кофе</h2>
+        <p>Скоро появится информация о доставке кофе!</p>
+    </div>
+
+    <div id="detyam" class="section">
+        <h2>Любят Дети</h2>
+        <p>Скоро появится информация о детских блюдах!</p>
+    </div>
 
     <footer>
         <a href="https://docs.google.com/document/d/1t_EXCycQd9zB6ROtCKMSlA8t1LP8kd32b0rzBIGy3eA/edit?usp=sharing">Пользовательское соглашение</a>
         <a href="https://docs.google.com/document/d/1KTvB4iE7zBwjng0ut5Prs3xZgzArqqAgFnVuegSeUJA/edit?usp=sharing">Политика конфиденциальности</a>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Скрываем все секции
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Показываем выбранную секцию
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
