@@ -23,12 +23,10 @@
             margin: 10px 0 20px;
         }
         .menu {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
             background-color: white;
-            padding: 10px 0;
+            padding: 10px 15px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             display: flex;
@@ -51,9 +49,6 @@
             color: green;
             text-decoration: underline;
         }
-        .content {
-            margin-top: 60px;
-        }
         .btn {
             display: inline-block;
             background-color: green;
@@ -66,6 +61,28 @@
         }
         .btn:hover {
             background-color: #005500;
+        }
+        img {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
+        }
+        .description {
+            font-size: 1.2rem;
+            margin: 5px 0;
+            color: #555;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        footer a {
+            color: #000;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
         .section {
             display: none;
@@ -80,6 +97,10 @@
     </style>
 </head>
 <body>
+
+    <h1>"ДОСТАР"</h1>
+    <p>ДОСТАВКА ЕДЫ</p>
+    
     <div class="menu">
         <a onclick="showSection('gotovaya-eda')">Готовая еда</a>
         <a onclick="showSection('deserty')">Десерты</a>
@@ -87,24 +108,49 @@
         <a onclick="showSection('detyam')">Любят Дети</a>
     </div>
 
-    <div class="content">
-        <div id="gotovaya-eda" class="section active">
-            <h2>Готовая еда</h2>
-            <p>Описание готовой еды.</p>
+    <div id="gotovaya-eda" class="section active">
+        <h2>Готовая еда</h2>
+
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=77072047360&text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
+                <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
+            </a>
+            <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
+            <a href="https://api.whatsapp.com/send?phone=77072047360" class="btn">Заказать в WhatsApp</a>
         </div>
-        <div id="deserty" class="section">
-            <h2>Десерты</h2>
-            <p>Описание десертов.</p>
-        </div>
-        <div id="kofe" class="section">
-            <h2>Кофе</h2>
-            <p>Описание кофе.</p>
-        </div>
-        <div id="detyam" class="section">
-            <h2>Любят Дети</h2>
-            <p>Описание детских блюд.</p>
+
+        <div>
+            <a href="https://api.whatsapp.com/send?phone=77072047360&text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
+                <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
+            </a>
+            <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
+            <a href="https://api.whatsapp.com/send?phone=77072047360" class="btn">Заказать в WhatsApp</a>
         </div>
     </div>
+
+    <div id="deserty" class="section">
+        <h2>Десерты</h2>
+        <a href="https://api.whatsapp.com/send?phone=77474705053">
+            <img src="https://i.ibb.co/7kJh79G/Dostar.jpg" alt="Заказать в WhatsApp">
+        </a>
+        <div class="description">Хотите рекламу здесь? пишите в WhatsApp:</div>
+        <a href="https://api.whatsapp.com/send?phone=77474705053" class="btn">Заказать в WhatsApp</a>
+    </div>
+
+    <div id="kofe" class="section">
+        <h2>Кофе</h2>
+        <p>Скоро появится информация о доставке кофе!</p>
+    </div>
+
+    <div id="detyam" class="section">
+        <h2>Любят Дети</h2>
+        <p>Скоро появится информация о детских блюдах!</p>
+    </div>
+
+    <footer>
+        <a href="https://docs.google.com/document/d/1t_EXCycQd9zB6ROtCKMSlA8t1LP8kd32b0rzBIGy3eA/edit?usp=sharing">Пользовательское соглашение</a>
+        <a href="https://docs.google.com/document/d/1KTvB4iE7zBwjng0ut5Prs3xZgzArqqAgFnVuegSeUJA/edit?usp=sharing">Политика конфиденциальности</a>
+    </footer>
 
     <script>
         function showSection(sectionId) {
@@ -114,5 +160,6 @@
             document.getElementById(sectionId).classList.add('active');
         }
     </script>
+
 </body>
 </html>
