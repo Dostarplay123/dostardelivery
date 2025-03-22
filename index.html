@@ -10,54 +10,52 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
+            color: #333;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-top: 20px;
-            color: #005500;
+            color: #007a33;
         }
         p {
-            color: #005500;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin: 10px 0 20px;
         }
         .menu {
             position: sticky;
             top: 0;
             background-color: white;
-            padding: 10px 15px;
+            padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             display: flex;
             justify-content: center;
-            overflow-x: auto;
-            white-space: nowrap;
+            flex-wrap: wrap;
             border-bottom: 2px solid #ddd;
         }
         .menu a {
-            display: inline-block;
             text-decoration: none;
-            color: #005500;
-            font-size: 1.4rem;
-            margin: 0 15px;
-            padding: 10px;
+            color: #007a33;
+            font-size: 1.2rem;
+            margin: 10px;
+            padding: 8px 12px;
             transition: 0.3s;
-            cursor: pointer;
         }
         .menu a:hover {
-            color: green;
+            color: #005500;
             text-decoration: underline;
         }
         .btn {
             display: inline-block;
-            background-color: green;
+            background-color: #007a33;
             color: white;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             margin: 10px 0;
-            border-radius: 5px;
+            border-radius: 8px;
+            transition: 0.3s;
         }
         .btn:hover {
             background-color: #005500;
@@ -66,18 +64,21 @@
             width: 100%;
             max-width: 300px;
             margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .description {
-            font-size: 1.2rem;
-            margin: 5px 0;
+            font-size: 1.1rem;
+            margin: 10px 0;
             color: #555;
         }
         footer {
             margin-top: 20px;
-            font-size: 1rem;
+            font-size: 0.9rem;
+            padding: 10px;
         }
         footer a {
-            color: #000;
+            color: #007a33;
             text-decoration: none;
             margin: 0 10px;
         }
@@ -97,7 +98,6 @@
     </style>
 </head>
 <body>
-
     <h1>"ДОСТАР"</h1>
     <p>ДОСТАВКА ЕДЫ</p>
     
@@ -107,46 +107,33 @@
         <a onclick="showSection('kofe')">Кофе</a>
         <a onclick="showSection('detyam')">Любят Дети</a>
     </div>
-
+    
     <div id="gotovaya-eda" class="section active">
         <h2>Готовая еда</h2>
-
         <div>
-            <a href="https://api.whatsapp.com/send?phone=77072047360&text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone=77072047360" target="_blank">
                 <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
             </a>
-            <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
-            <a href="https://api.whatsapp.com/send?phone=77072047360" class="btn">Заказать в WhatsApp</a>
-        </div>
-
-        <div>
-            <a href="https://api.whatsapp.com/send?phone=77072047360&text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
-                <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
-            </a>
-            <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad". Работаем с 10:00 до 22:00.</div>
+            <div class="description">Доставка: шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad".</div>
             <a href="https://api.whatsapp.com/send?phone=77072047360" class="btn">Заказать в WhatsApp</a>
         </div>
     </div>
-
+    
     <div id="deserty" class="section">
         <h2>Десерты</h2>
-        <a href="https://api.whatsapp.com/send?phone=77474705053">
-            <img src="https://i.ibb.co/7kJh79G/Dostar.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Хотите рекламу здесь? пишите в WhatsApp:</div>
-        <a href="https://api.whatsapp.com/send?phone=77474705053" class="btn">Заказать в WhatsApp</a>
+        <p>Информация скоро появится!</p>
     </div>
-
+    
     <div id="kofe" class="section">
         <h2>Кофе</h2>
         <p>Скоро появится информация о доставке кофе!</p>
     </div>
-
+    
     <div id="detyam" class="section">
         <h2>Любят Дети</h2>
         <p>Скоро появится информация о детских блюдах!</p>
     </div>
-
+    
     <footer>
         <a href="https://docs.google.com/document/d/1t_EXCycQd9zB6ROtCKMSlA8t1LP8kd32b0rzBIGy3eA/edit?usp=sharing">Пользовательское соглашение</a>
         <a href="https://docs.google.com/document/d/1KTvB4iE7zBwjng0ut5Prs3xZgzArqqAgFnVuegSeUJA/edit?usp=sharing">Политика конфиденциальности</a>
@@ -160,6 +147,5 @@
             document.getElementById(sectionId).classList.add('active');
         }
     </script>
-
 </body>
 </html>
