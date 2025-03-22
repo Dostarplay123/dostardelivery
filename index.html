@@ -30,9 +30,13 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            border-bottom: 2px solid #ddd;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .menu::-webkit-scrollbar {
+            display: none;
         }
         .menu a {
             text-decoration: none;
@@ -41,6 +45,7 @@
             margin: 10px;
             padding: 8px 12px;
             transition: 0.3s;
+            flex-shrink: 0;
         }
         .menu a:hover {
             color: #005500;
