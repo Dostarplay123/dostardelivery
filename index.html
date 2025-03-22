@@ -27,21 +27,14 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            overflow-x: auto;
-            white-space: nowrap;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-        .menu::-webkit-scrollbar {
-            display: none;
         }
         .menu a {
             text-decoration: none;
             color: #333;
             font-size: 1rem;
-            margin: 0 5px;
             padding: 10px 15px;
             background-color: #FFD700;
             border-radius: 20px;
@@ -93,9 +86,19 @@
             opacity: 1;
         }
         @media (max-width: 768px) {
+            .menu {
+                flex-direction: row;
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 10px 5px;
+            }
+            .menu::-webkit-scrollbar {
+                display: none;
+            }
             .menu a {
                 font-size: 0.9rem;
                 padding: 8px 12px;
+                white-space: nowrap;
             }
             .btn {
                 font-size: 0.9rem;
