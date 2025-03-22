@@ -13,14 +13,11 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        h1 {
-            font-size: 2.5rem;
+        .logo img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
             margin-top: 20px;
-            color: #007a33;
-        }
-        p {
-            font-size: 1.2rem;
-            margin: 10px 0 20px;
         }
         .menu {
             position: sticky;
@@ -30,6 +27,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             display: flex;
+            justify-content: center;
             overflow-x: auto;
             white-space: nowrap;
             scrollbar-width: none;
@@ -41,11 +39,12 @@
         .menu a {
             text-decoration: none;
             color: #007a33;
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin: 10px;
             padding: 8px 12px;
             transition: 0.3s;
             flex-shrink: 0;
+            cursor: pointer;
         }
         .menu a:hover {
             color: #005500;
@@ -55,9 +54,9 @@
             display: inline-block;
             background-color: #007a33;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 10px 20px;
             margin: 10px 0;
             border-radius: 8px;
             transition: 0.3s;
@@ -68,14 +67,16 @@
         img {
             width: 100%;
             max-width: 300px;
+            height: auto;
             margin: 20px 0;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .description {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin: 10px 0;
             color: #555;
+            padding: 0 10px;
         }
         footer {
             margin-top: 20px;
@@ -100,11 +101,25 @@
             display: block;
             opacity: 1;
         }
+        @media (max-width: 768px) {
+            .menu a {
+                font-size: 0.9rem;
+                padding: 6px 10px;
+            }
+            .btn {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+            .description {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>"ДОСТАР"</h1>
-    <p>ДОСТАВКА ЕДЫ</p>
+    <div class="logo">
+        <img src="https://i.ibb.co.com/gZMQcMr4/dostar-aligned.jpg" alt="ДОСТАВКА ЕДЫ">
+    </div>
     
     <div class="menu">
         <a onclick="showSection('gotovaya-eda')">Готовая еда</a>
@@ -122,15 +137,6 @@
             <div class="description">Доставка: шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad".</div>
             <a href="https://api.whatsapp.com/send?phone=77072047360" class="btn">Заказать в WhatsApp</a>
         </div>
-            <!-- Вторая картинка с описанием -->
-    <div>
-        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!">
-            <img src="https://i.ibb.co.com/7x5287Mw/Aynalaiyn.jpg" alt="Заказать в WhatsApp">
-        </a>
-        <div class="description">Выпечка, торты, десерты от кондитерской "Aynalayin" подробности в What's up. Работаем с 09:00 утра до 22:00 вечера:</div>
-        <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!!" class="btn">Заказать в WhatsApp</a>
-    </div>
-
     </div>
     
     <div id="deserty" class="section">
