@@ -23,6 +23,13 @@
             margin: 10px 0 20px;
         }
         .menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
             overflow-x: auto;
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
@@ -32,10 +39,6 @@
             justify-content: flex-start;
             gap: 15px;
             padding: 10px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            scroll-behavior: smooth;
             width: max-content;
         }
         .menu a {
@@ -85,11 +88,12 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .content {
+            margin-top: 60px;
+        }
     </style>
 </head>
 <body>
-    <h1>"ДОСТАР"</h1>
-    <p>ДОСТАВКА ЕДЫ</p>
     <div class="menu-container">
         <div class="menu" id="menu">
             <a href="#gotovaya-eda">Готовая еда</a>
@@ -99,36 +103,32 @@
         </div>
     </div>
     
-    <hr>
-
-    <div id="gotovaya-eda">
-        <h2>Готовая еда</h2>
-        <div>
-            <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
-                <img src="https://i.ibb.co.com/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
-            </a>
-            <div class="description">Доставка: Шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad", подробности в What's up. Работаем с 10:00 утра до 22:00 вечера:</div>
-            <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
-        </div>
+    <div class="content">
+        <h1>"ДОСТАР"</h1>
+        <p>ДОСТАВКА ЕДЫ</p>
         <hr>
-    </div>
-    
-    <hr>
 
-    <div id="deserty">
-        <h2>Десерты</h2>
-    </div>
-    
-    <hr>
-    
-    <div id="kofe">
-        <h2>Кофе</h2>
-    </div>
-    
-    <hr>
-    
-    <div id="detyam">
-        <h2>Любят Дети</h2>
+        <div id="gotovaya-eda">
+            <h2>Готовая еда</h2>
+        </div>
+        
+        <hr>
+
+        <div id="deserty">
+            <h2>Десерты</h2>
+        </div>
+        
+        <hr>
+        
+        <div id="kofe">
+            <h2>Кофе</h2>
+        </div>
+        
+        <hr>
+        
+        <div id="detyam">
+            <h2>Любят Дети</h2>
+        </div>
     </div>
 
     <footer>
