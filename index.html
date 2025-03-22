@@ -29,6 +29,11 @@
             padding: 10px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            scroll-behavior: smooth;
         }
         .menu a {
             text-decoration: none;
@@ -37,6 +42,7 @@
             margin: 0 15px;
             padding: 10px;
             transition: 0.3s;
+            flex-shrink: 0;
         }
         .menu a:hover {
             color: green;
@@ -82,12 +88,38 @@
 <body>
     <h1>"ДОСТАР"</h1>
     <p>ДОСТАВКА ЕДЫ</p>
-    <div class="menu">
+    <div class="menu" id="menu">
         <a href="#gotovaya-eda">Готовая еда</a>
         <a href="#deserty">Десерты</a>
         <a href="#kofe">Кофе</a>
         <a href="#detyam">Любят Дети</a>
     </div>
+
+    <script>
+        const menu = document.getElementById('menu');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        menu.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - menu.offsetLeft;
+            scrollLeft = menu.scrollLeft;
+        });
+        menu.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+        menu.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+        menu.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - menu.offsetLeft;
+            const walk = (x - startX) * 2;
+            menu.scrollLeft = scrollLeft - walk;
+        });
+    </script>
 
     <hr>
 
@@ -101,13 +133,6 @@
             <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
         </div>
         <hr>
-        <div>
-            <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!">
-                <img src="https://i.ibb.co.com/7x5287Mw/Aynalaiyn.jpg" alt="Заказать в WhatsApp">
-            </a>
-            <div class="description">Доставка: Выпечка, торты, десерты от кондитерской "Aynalayin" подробности в What's up. Работаем с 09:00 утра до 22:00 вечера:</div>
-            <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!!" class="btn">Заказать в WhatsApp</a>
-        </div>
     </div>
     
     <hr>
