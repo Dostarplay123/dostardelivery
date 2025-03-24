@@ -66,5 +66,34 @@
         <a onclick="showSection('kofe')">Кофе</a>
         <a onclick="showSection('detyam')">Любят Дети</a>
     </div>
+    
+    <div id="gotovaya-eda" class="section active">
+        <h2>Готовая еда:</h2>
+        <p>Здесь будет описание готовой еды.</p>
+    </div>
+    
+    <div id="deserty" class="section">
+        <h2>Десерты</h2>
+        <p>Здесь будет описание десертов.</p>
+    </div>
+    
+    <div id="kofe" class="section">
+        <h2>Кофе</h2>
+        <p>Здесь будет описание кофе.</p>
+    </div>
+    
+    <div id="detyam" class="section">
+        <h2>Любят Дети</h2>
+        <p>Здесь будет описание детского меню.</p>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
