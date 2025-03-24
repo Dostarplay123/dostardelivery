@@ -28,11 +28,8 @@
             z-index: 1000;
             display: flex;
             overflow-x: auto;
-            gap: 10px;
-            justify-content: center;
             white-space: nowrap;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-bottom: 5px;
         }
         .menu::-webkit-scrollbar {
             display: none;
@@ -45,11 +42,10 @@
             background-color: #FFD700;
             border-radius: 20px;
             transition: 0.3s;
+            flex-shrink: 0;
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-            text-align: center;
-            min-width: 120px;
+            margin: 0 5px;
         }
         .menu a:hover {
             background-color: #FFC107;
@@ -69,20 +65,6 @@
         .btn:hover {
             background-color: #005500;
         }
-        img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .description {
-            font-size: 1rem;
-            margin: 10px 0;
-            color: #555;
-            padding: 0 10px;
-        }
         .section {
             display: none;
             opacity: 0;
@@ -97,7 +79,7 @@
 </head>
 <body>
     <div class="logo">
-        <img src="https://i.ibb.co/jk5wYq7c/2-optimized.png" alt="ДОСТАВКА ЕДЫ">
+        <img src="https://i.ibb.co/jk5wYq7/2-optimized.png" alt="ДОСТАВКА ЕДЫ">
     </div>
     
     <div class="menu">
@@ -108,8 +90,8 @@
     </div>
     
     <div id="gotovaya-eda" class="section active">
-        <h2>Готовая еда:</h2>
-        <a href="https://wa.me/77072047360?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" target="_blank">
+        <h2>Готовая еда</h2>
+        <a href="https://api.whatsapp.com/send?phone=77072047360" target="_blank">
             <img src="https://i.ibb.co/35VwCvsW/Whats-App-Image-2025-03-15-at-14-50-36-d0b90b77.jpg" alt="Заказать в WhatsApp">
         </a>
         <div class="description">Доставка: шашлык, фастфуд, чикен, фри, сырные палочки, наггетсы от "Marinad".</div>
@@ -125,6 +107,21 @@
         <a href="https://wa.me/77475704515?text=Здравствуйте, нашёл вас в приложении 'ДОСТАР', нужна доставка!" class="btn">Заказать в WhatsApp</a>
     </div>
     
+    <div id="kofe" class="section">
+        <h2>Кофе</h2>
+        <p>Скоро появится информация о доставке кофе!</p>
+    </div>
+    
+    <div id="detyam" class="section">
+        <h2>Любят Дети</h2>
+        <p>Скоро появится информация о детских блюдах!</p>
+    </div>
+    
+    <footer>
+        <a href="https://docs.google.com/document/d/1t_EXCycQd9zB6ROtCKMSlA8t1LP8kd32b0rzBIGy3eA/edit?usp=sharing">Пользовательское соглашение</a>
+        <a href="https://docs.google.com/document/d/1KTvB4iE7zBwjng0ut5Prs3xZgzArqqAgFnVuegSeUJA/edit?usp=sharing">Политика конфиденциальности</a>
+    </footer>
+
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('.section').forEach(section => {
