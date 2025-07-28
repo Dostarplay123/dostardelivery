@@ -9,20 +9,20 @@
       margin: 0;
       padding: 0;
       font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
+      background: linear-gradient(to right, #ffeb3b, #8bc34a);
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
+      color: #333;
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
     }
 
     h1 {
@@ -35,8 +35,9 @@
       margin-bottom: 30px;
     }
 
-    a.whatsapp-button {
+    .button {
       display: inline-block;
+      margin: 10px;
       background-color: #25D366;
       color: white;
       padding: 15px 30px;
@@ -46,8 +47,17 @@
       transition: background-color 0.3s ease;
     }
 
-    a.whatsapp-button:hover {
+    .button:hover {
       background-color: #1ebe5b;
+    }
+
+    .call-button {
+      background-color: #fbc02d;
+      color: #333;
+    }
+
+    .call-button:hover {
+      background-color: #f9a825;
     }
 
     @media (max-width: 600px) {
@@ -61,9 +71,16 @@
 <body>
   <div class="container">
     <h1>Регистрация в такси</h1>
-    <p>Нажмите кнопку ниже, чтобы начать регистрацию через WhatsApp</p>
-    <a class="whatsapp-button" href="https://wa.me/77080486292?text=Здравствуйте!%20Пишу%20по%20вопросу%20регистрации%20в%20такси" target="_blank">
+    <p>Нажмите кнопку ниже, чтобы написать в WhatsApp или позвонить</p>
+
+    <!-- Кнопка WhatsApp -->
+    <a class="button" href="https://wa.me/77080486292?text=Здравствуйте!%20Пишу%20по%20вопросу%20регистрации%20в%20такси" target="_blank">
       Написать в WhatsApp
+    </a>
+
+    <!-- Кнопка звонка -->
+    <a class="button call-button" href="tel:+77080486292">
+      Позвонить
     </a>
   </div>
 </body>
