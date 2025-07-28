@@ -23,23 +23,23 @@
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      max-width: 400px;
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
-    p {
+    .schedule {
       font-size: 18px;
       margin-bottom: 30px;
     }
 
     .button {
       display: inline-block;
-      margin: 10px;
-      background-color: #25D366;
-      color: white;
+      background-color: #fbc02d;
+      color: #333;
       padding: 15px 30px;
       font-size: 18px;
       text-decoration: none;
@@ -48,16 +48,13 @@
     }
 
     .button:hover {
-      background-color: #1ebe5b;
-    }
-
-    .call-button {
-      background-color: #fbc02d;
-      color: #333;
-    }
-
-    .call-button:hover {
       background-color: #f9a825;
+    }
+
+    .note {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
     }
 
     @media (max-width: 600px) {
@@ -71,17 +68,17 @@
 <body>
   <div class="container">
     <h1>Регистрация в такси</h1>
-    <p>Нажмите кнопку ниже, чтобы написать в WhatsApp или позвонить</p>
+    <p class="schedule">График регистрации: с 8:30 до 22:00</p>
 
-    <!-- Кнопка WhatsApp по твоей ссылке -->
-    <a class="button" href="https://wa.me/77474705053?text=Здравствуйте, нужна регистрация в такси!" target="_blank">
-      Написать в WhatsApp
-    </a>
-
-    <!-- Кнопка звонка -->
-    <a class="button call-button" href="tel:+77474705053">
+    <!-- Кнопка Позвонить -->
+    <a class="button" href="tel:+77474705053">
       Позвонить
     </a>
+
+    <p class="note">
+      По вопросам и пожеланиям звоните: <br>
+      <strong>87074075050</strong>
+    </p>
   </div>
 </body>
 </html>
